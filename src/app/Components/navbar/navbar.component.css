@@ -1,17 +1,21 @@
 *{
-    font-family:sans-serif;
+    padding:0;
+    margin:0;
+}
+.logo{
+   flex:1;
+    color:#f2f2f2;
 }
 header{
      background-color:#333333;
      padding:5px 0;
-     width:100vw;
+     display:flex;
+     align-items:center;
 }
 .route-links {
     display: flex;
-    position: relative;
-    left:40%;
 }
-.route-links li{
+.route{
     font-size:15px;
     list-style:none;
     display: block;
@@ -32,4 +36,7 @@ a{
     height:20px;
     line-height: 20px;
 
+}
+li{
+    list-style:none;
 }

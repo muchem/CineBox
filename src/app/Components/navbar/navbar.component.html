@@ -1,7 +1,18 @@
 <header>
-    <ul class = "route-links">
-        <li><a href="#"routerLink="/">Home</a></li>
-        <li><a href="#" routerLink="/Movies">Movies</a></li>
-        <li><a href="#" routerLink="/TV">TV Series</a></li>
-    </ul>
+    <div class = "logo">
+        <h3>Cinebox</h3>
+    </div>
+    <div class = "link-box">
+        <ul class="route-links">
+          <li class = "route"><a href="#" routerLink="/">Home</a></li>
+          <li class="route"><a href="#" routerLink="/Movies">Movies</a></li>
+          <li class="route"><a href="#" routerLink="/TV">TV Series</a></li>
+          <li>
+            <input placeholder="Enter Movie or Series name">
+          </li>
+          <li>
+            <a href="#" routerLink="/searchResults" class="btn btn-danger btn-sm" role="button">Search</a>
+          </li>
+        </ul>
+    </div>
 </header>

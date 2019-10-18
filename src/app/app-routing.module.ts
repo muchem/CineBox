@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './Components/home/home.component';
 import { MoviesComponent } from './Components/movies/movies.component';
 import { TVSeriesComponent } from './Components/tv-series/tv-series.component';
+import { ResultsComponent } from './Components/results/results.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'Movies',component:MoviesComponent},
-  {path:'TV',component:TVSeriesComponent}
+  { path:'',component:HomeComponent },
+  { path:'Movies',component:MoviesComponent },
+  { path:'TV',component:TVSeriesComponent },
+  { path:'searchResults',component:ResultsComponent }
 ];
 
 @NgModule({
