@@ -7,11 +7,11 @@ import { ResultsComponent } from './Components/results/results.component';
 
 const routes: Routes = [
   { path:'',component:HomeComponent },
+  { path:'searchResults',component:ResultsComponent },
   { path:'Movies',component:MoviesComponent },
   { path:'TV',component:TVSeriesComponent },
   { path:'searchResults',component:ResultsComponent }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

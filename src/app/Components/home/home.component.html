@@ -1,1 +1,16 @@
-<p>Home Component works!</p>
+<router-outlet></router-outlet>
+<div class = "jumbotron"style = "margin-bottom:0px">
+  <div class = "logo-box">
+    <h1 class="hero-text">CineBox<img src="http://www.pngmart.com/files/6/Ticket-Transparent-Background.png"
+        id="ticket-icon"></h1>
+  </div>
+       <div class='search-area'>
+         <input placeholder="Enter Movie or Series name" class="search-input">
+         <a href="#" routerLink="/searchResults" class="btn btn-danger btn-sm search-bnt" role="button">
+           <img
+             src="https://icon-library.net/images/white-search-icon-transparent-background/white-search-icon-transparent-background-1.jpg"
+             id="search-icon">
+         </a>
+       </div>
+</div>
+<app-footer></app-footer>

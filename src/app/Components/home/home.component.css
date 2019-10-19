@@ -1,0 +1,51 @@
+.jumbotron {
+  height: 100vh;
+  background-image: url('../../images/movie-collection.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align:center;
+}
+.logo-box{
+    position: relative;
+    top:35%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    padding:15px;
+    width:600px;
+    text-align:center;
+}
+.hero-text{
+      background: rgba(0, 0, 0, 0.788);
+    color:#f3f3f3;
+    font-size:6.5rem;
+    font-family: 'Bangers',
+    cursive;
+    letter-spacing:10px;
+    padding:15px;
+    margin:0;
+}
+.search-area{
+    margin:10px 0;
+    align-items: center;
+     position: relative;
+     top:20%;
+     left:50%;
+     transform:translate(-50%, -50%);
+}
+.search-input{
+    width:650px;
+    padding: 8px;
+    border:solid #dadada 1px;
+    border-radius: 3px;
+
+}
+#search-icon{
+    width:30px
+}
+#ticket-icon{
+    width:70px;
+}
+.search-bnt{
+    padding:5px;
+}
