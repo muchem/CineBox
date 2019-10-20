@@ -15,4 +15,7 @@ export class MoviesService {
   getPopularMovies():Observable<any[]>{
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}&language=en-US&page=1`);
   }
+  getTopRated():Observable<any[]>{
+    return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&language=en-US&page=1`);
+  }
 }

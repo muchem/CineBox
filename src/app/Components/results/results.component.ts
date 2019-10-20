@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MoviesService } from '../../Services/movies.service';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private Service: MoviesService) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const searchValue = params['searchValue']
+      });
   }
 
 }

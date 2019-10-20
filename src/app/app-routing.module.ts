@@ -10,7 +10,7 @@ const routes: Routes = [
   { path:'searchResults',component:ResultsComponent },
   { path:'Movies',component:MoviesComponent },
   { path:'TV',component:TVSeriesComponent },
-  { path:'searchResults',component:ResultsComponent }
+  { path:'searchResults/:searchValue',component:ResultsComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -5,8 +5,9 @@
         id="ticket-icon"></h1>
   </div>
        <div class='search-area'>
-         <input placeholder="Enter Movie or Series name" class="search-input">
-         <a href="#" routerLink="/searchResults" class="btn btn-danger btn-sm search-bnt" role="button">
+         <input placeholder="Enter Movie or Series name" class="search-input" [(ngModel)]="searchText"
+           name="searchText">
+         <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn btn-danger btn-sm search-bnt" role="button">
            <img
              src="https://icon-library.net/images/white-search-icon-transparent-background/white-search-icon-transparent-background-1.jpg"
              id="search-icon">
