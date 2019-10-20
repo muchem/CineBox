@@ -1,15 +1,16 @@
 <router-outlet></router-outlet>
 <div class = "jumbotron"style = "margin-bottom:0px">
+  <div class = "main-box">
   <div class = "logo-box">
     <h1 class="hero-text">CineBox<img src="http://www.pngmart.com/files/6/Ticket-Transparent-Background.png"
         id="ticket-icon"></h1>
+          </div>
+    <input class="input-search" placeholder="Enter a Movie" aria-label="Search"[(ngModel)]="searchText"
+      name="searchText"><span>
+        <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
+        <button class ="search-bnt" type="submit">Search</button>
+      </a>
+      </span>
+    </div>
   </div>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" placeholder="Enter a Movie" aria-label="Search"[(ngModel)]="searchText"
-              name="searchText">
-              <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
-            <button class="btn btn-danger my-sm-0" type="submit">Search</button>
-            </a>
-          </form>
-       </div>
 <app-footer></app-footer>

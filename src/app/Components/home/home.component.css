@@ -5,15 +5,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align:center;
 }
 .logo-box{
-    position: relative;
-    top:30%;
-    left:50%;
-    transform:translate(-50%, -50%);
     padding:15px;
     width:550px;
-    text-align:center;
     margin:auto;
 }
 .hero-text{
@@ -26,37 +22,45 @@
     padding:15px;
     margin:0;
 }
-.search-area{
+form{
+    text-align:center;
     margin:10px 0;
     align-items: center;
-     position: relative;
-     top:20%;
-     left:50%;
-     transform:translate(-50%, -50%);
-}
-.search-input{
-    width:50%;
-    margin:auto;
-    border:solid #dadada 1px;
-    border-radius: 3px;
-   height:30px;
-
 }
 #search-icon{
     width:25px;
-
-}
-button{
-        border:solid #dadada 1px;
-        border-radius: 3px;
 }
 #ticket-icon{
     width:70px;
 }
+.main-box{
+     text-align:center;
+       position:relative;
+       top:35%;
+       left:50%;
+       transform:translate(-50%, -50%);
+}
+.input-search{
+    width:50%;
+    margin:auto;
+    padding:8px
+}
 .search-bnt{
-    padding:5px;
+ padding:8px
+}
+@media screen and (max-width:1024px){
+    .jumbotron{
+        height: 100vh;
+    }
 }
 @media screen and (max-width:576px){
+    .input-search{
+        width: 60%;
+        padding:5px;
+    }
+    .search-bnt {
+      padding: 5px
+    }
     .hero-text{
         font-size: 3.5rem;
         letter-spacing:5px;
