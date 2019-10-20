@@ -4,14 +4,12 @@
     <h1 class="hero-text">CineBox<img src="http://www.pngmart.com/files/6/Ticket-Transparent-Background.png"
         id="ticket-icon"></h1>
   </div>
-       <div class='search-area'>
-         <input placeholder="Enter Movie or Series name" class="search-input" [(ngModel)]="searchText"
-           name="searchText">
-         <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn btn-danger btn-sm search-bnt" role="button">
-           <img
-             src="https://icon-library.net/images/white-search-icon-transparent-background/white-search-icon-transparent-background-1.jpg"
-             id="search-icon">
-         </a>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" placeholder="Enter a Movie" aria-label="Search"[(ngModel)]="searchText"
+              name="searchText">
+              <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
+            <button class="btn btn-danger my-sm-0" type="submit">Search</button>
+            </a>
+          </form>
        </div>
-</div>
 <app-footer></app-footer>

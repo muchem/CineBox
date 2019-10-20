@@ -1,5 +1,7 @@
 <div class = "container">
     <h5 class = "results-txt">Showing results for "{{ searchValue }}"</h5>
+    <input placeholder="Search Movie" [(ngModel)]="newSearchValue" name="newSearchValue">
+    <button (click)="searchAgain(newSearchValue)">Search</button>
     <pre>
         {{movies | json }}
     </pre>

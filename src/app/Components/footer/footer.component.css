@@ -1,7 +1,17 @@
 .container-fluid {
     background-color:#070707;
+    margin:0px;
 }
 .footer-txt{
     color:#d8d8d8;
     padding:10px;
+    font-size:12px;
+    margin:0;
+}
+footer{
+       position: absolute;
+       bottom:0%;
+       width:100%;
+    
+    
 }
