@@ -1,1 +1,7 @@
-<p>results works!</p>
+<div class = "container">
+    <h5 class = "results-txt">Showing results for "{{ searchValue }}"</h5>
+    <pre>
+        {{movies | json }}
+    </pre>
+    <movie-card></movie-card>
+</div>

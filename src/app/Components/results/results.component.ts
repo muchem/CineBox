@@ -8,13 +8,16 @@ import { MoviesService } from '../../Services/movies.service';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-
+  searchValue:string;
+  movies:any[];
+  Popular:any[];
   constructor(private route: ActivatedRoute, private Service: MoviesService) { }
-
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      const searchValue = params['searchValue']
+      this.searchValue = params.get('searchValue');
       });
+    this.Service.searchMovies(this.searchValue).subscribe(result => {
+      this.movies = result;
+    })
   }
-
 }
