@@ -46,7 +46,10 @@ form{
     padding:8px
 }
 .search-bnt{
- padding:8px
+    padding:8px;
+    background-color:#d32727;
+    color:#f2f2f2;
+    border-color:#d32727;
 }
 @media screen and (max-width:1024px){
     .jumbotron{
