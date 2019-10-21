@@ -1,9 +1,20 @@
-<div class = "container">
+<header>
+  <div class="logo">
+  </div>
+  <div class="link-box">
+    <ul class="route-links">
+      <li class="route"><a href="#" routerLink="/">Home</a></li>
+      <li class="route"><a href="#" routerLink="/Movies">Movies</a></li>
+      <li class="route"><a href="#" routerLink="/TV">TV Series</a></li>
+    </ul>
+  </div>
+  <input class="input-search" placeholder="Enter a Movie" aria-label="Search" [(ngModel)]="searchText"
+    name="searchText"><span>
+    <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
+      <button class="search-bnt" type="submit" (click)=ngOnInit()>Search</button>
+    </a>
+  </span>
+</header>
     <h5 class = "results-txt">Showing results for "{{ searchValue }}"</h5>
-    <input placeholder="Search Movie" [(ngModel)]="newSearchValue" name="newSearchValue">
-    <button (click)="searchAgain(newSearchValue)">Search</button>
-    <pre>
-        {{movies | json }}
-    </pre>
-    <movie-card></movie-card>
-</div>
+    <movie-card [Movie] = "movies"></movie-card>
+

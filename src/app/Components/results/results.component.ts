@@ -22,10 +22,4 @@ export class ResultsComponent implements OnInit {
       this.movies = result;
     })
   }
-  searchAgain(newSearchValue:string){
-    this.searchValue = this.newSearchValue;
-    this.Service.searchMovies(this.searchValue).subscribe(result => {
-      this.movies = result;
-    })
-  }
 }
