@@ -1,7 +1,7 @@
 .results-txt{
     padding: 10px 0;
 }
-* {
+*{
   padding: 0;
   margin: 0;
 }
@@ -34,11 +34,6 @@ header {
   padding: 8px;
   background-color: rgba(255, 255, 255, 0.05);
 }
-
-.active {
-  background-color: rgba(255, 93, 75, 0.856);
-}
-
 a {
   text-decoration: none;
   color: #ffffff;
@@ -47,7 +42,6 @@ a {
   line-height: 20px;
 
 }
-
 li {
   list-style: none;
 }
@@ -56,7 +50,7 @@ li {
   padding: 2px
 }
 .search-bnt {
-  padding: 2px;
+  padding: 5px;
   background-color: #d32727;
   color: #f2f2f2;
   border-color: #d32727;

@@ -27,9 +27,6 @@ header{
     padding:8px;
     background-color:rgba(255, 255, 255, 0.05);
 }
-.active{
-    background-color: rgba(255, 93, 75, 0.856);
-}
 a{
     text-decoration:none;
     color:#ffffff;
@@ -40,4 +37,7 @@ a{
 }
 li{
     list-style:none;
+}
+.active {
+  background-color: #d32727;
 }
