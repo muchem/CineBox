@@ -1,11 +1,6 @@
 .results-txt{
     padding: 10px 0;
 }
-*{
-  padding: 0;
-  margin: 0;
-}
-
 .logo {
   flex: 1;
   color: #f2f2f2;

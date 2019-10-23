@@ -1,3 +1,4 @@
+<section>
 <header>
   <div class="logo">
   </div>
@@ -15,7 +16,17 @@
     </a>
   </span>
 </header>
+  <div class = "container">
     <h5 class = "results-txt">Showing results for "{{ searchValue }}"</h5>
-    <movie-card [Movies] = "Movies">
-    </movie-card>
+    <div class = "row">
+      <div class='col-lg-3 col-md-4
+        col-sm-2 col-12'>
+          <movie-card [Movies]="Movies"
+          *ngFor="let Movies of Movies">
+          </movie-card>
+      </div>
+  </div>
+</div>
+</section>
+   
 

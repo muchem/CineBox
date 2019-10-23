@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesService } from '../../Services/movies.service';
-import { Responce } from '../../Models/response';
+import { Response } from '../../Models/response';
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
@@ -9,16 +9,17 @@ import { Responce } from '../../Models/response';
 })
 export class ResultsComponent implements OnInit {
   searchValue:string;
-  newSearchValue:string;
   Popular:any[];
-  Movies: Responce[];
+  Movies:Response[];
   constructor(private route: ActivatedRoute, private Service: MoviesService) { }
   ngOnInit() {
+    //get url paramter value
     this.route.paramMap.subscribe(params => {
       this.searchValue = params.get('searchValue');
       });
-    this.Service.searchMovies(this.searchValue).subscribe(result => {
-      this.Movies = result;
+    this.Service.searchMovies(this.searchValue).subscribe(res => {
+      this.Movies = res.results;
+      console.log(this.Movies);
     })
   }
 }

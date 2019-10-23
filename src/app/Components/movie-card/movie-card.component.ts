@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Responce } from '../../Models/response';
+import { Response } from '../../Models/response';
 
 @Component({
   selector: 'movie-card',
@@ -7,7 +7,7 @@ import { Responce } from '../../Models/response';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent implements OnInit {
-  @Input()  Movies: Responce[];
+  @Input()  Movies:Response[];
   constructor() { }
 
   ngOnInit() {
