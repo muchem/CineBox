@@ -9,23 +9,32 @@
       <li class="route"><a href="#" routerLink="/TV">TV Series</a></li>
     </ul>
   </div>
-  <input class="input-search" placeholder="Enter a Movie" aria-label="Search" [(ngModel)]="searchText"
-    name="searchText"><span>
-    <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
+  <ul class = "route-links">
+    <li><input class="input-search" placeholder="Enter a Movie" aria-label="Search" [(ngModel)]="searchText"
+        name="searchText">
+      </li>
+    <li>
+      <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
       <button class="search-bnt" type="submit" (click)="ngOnInit()">Search</button>
-    </a>
-  </span>
+      </a>
+      </li>
+  </ul>
 </header>
+  <main>
   <div class = "container">
     <h5 class = "results-txt">Showing results for "{{ searchValue }}"</h5>
     <div class = "row">
-      <div class='col-lg-3 col-md-2
-        col-12' *ngFor="let Movies of Movies">
+      <div class='col-lg-3 col-md-4 col-sm-6' *ngFor="let Movies of Movies">
           <movie-card [Movies]="Movies">
           </movie-card>
       </div>
-  </div>
+    </div>
 </div>
+</main>
+<footer class="container-fluid text-center">
+  <p class="footer-txt">Copyright © CineBox.com All Rights Reserved<br>
+    CineBox Browse Latest movies/TV shows</p>
+</footer>
 </section>
    
 

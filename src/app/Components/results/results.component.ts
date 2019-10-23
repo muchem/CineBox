@@ -9,17 +9,15 @@ import { Response } from '../../Models/response';
 })
 export class ResultsComponent implements OnInit {
   searchValue:string;
-  Popular:any[];
   Movies:Response[];
   constructor(private route: ActivatedRoute, private Service: MoviesService) { }
   ngOnInit() {
     //get url paramter value
     this.route.paramMap.subscribe(params => {
       this.searchValue = params.get('searchValue');
-      });
-    this.Service.searchMovies(this.searchValue).subscribe(res => {
+      this.Service.searchMovies(this.searchValue).subscribe(res => {
       this.Movies = res.results;
-      console.log(this.Movies);
-    })
+      })
+    });
   }
 }

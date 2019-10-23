@@ -1,4 +1,7 @@
 <div>
-<h2>{{ Movies.title }}</h2>
-<img src="https://image.tmdb.org/t/p/w200{{Movies.poster_path}}">
+    <div class = "img-box">
+        <img src="https://image.tmdb.org/t/p/w200{{Movies.poster_path}}">
+    </div>
+    <h6 class="tl-txt"><b>{{ Movies.title }}</b></h6>
+    <p class="data-txt"><small>{{ Movies.release_date }}</small></p>
 </div>

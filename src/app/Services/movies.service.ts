@@ -23,6 +23,6 @@ export class MoviesService {
   searchMovies(searchValue: string): Observable<Response[]>{
    let search =  new HttpParams().set('query',searchValue);
     this.searchString = { params: search };
-    return this.http.get<any>(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.searchString.params.updates[0].value}`);
+    return this.http.get<Response[]>(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.searchString.params.updates[0].value}`);
   }
 }
