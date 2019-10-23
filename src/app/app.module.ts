@@ -11,6 +11,7 @@ import { TVSeriesComponent } from './Components/tv-series/tv-series.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ResultsComponent } from './Components/results/results.component';
 import { MovieCardComponent } from './Components/movie-card/movie-card.component';
+import { MovieDetailsComponent } from './Components/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MovieCardComponent } from './Components/movie-card/movie-card.component
     TVSeriesComponent,
     FooterComponent,
     ResultsComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
