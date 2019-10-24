@@ -1,7 +1,9 @@
 <div>
+    <a href="#" routerLink='/movieDetails/{{ Movies.id }}'>
     <div class = "img-box">
         <img src="https://image.tmdb.org/t/p/w200{{Movies.poster_path}}">
     </div>
+    </a>
     <h6 class="tl-txt"><b>{{ Movies.title }}</b></h6>
     <p class="data-txt"><small>{{ Movies.release_date }}</small></p>
 </div>
