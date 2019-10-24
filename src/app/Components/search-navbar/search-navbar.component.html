@@ -1,1 +1,25 @@
-<p>search-navbar works!</p>
+<header>
+  <div class="logo">
+      <b>
+        <h4 class = "logo-txt">CineBox<img src="http://www.pngmart.com/files/6/Ticket-Transparent-Background.png" 
+            id="ticket-icon"></h4>
+      </b>
+  </div>
+  <div class="link-box">
+    <ul class="route-links">
+      <li class="route"><a href="#" routerLink="/">Home</a></li>
+      <li class="route"><a href="#" routerLink="/Movies">Movies</a></li>
+      <li class="route"><a href="#" routerLink="/TV">TV Series</a></li>
+    </ul>
+  </div>
+  <ul class="route-links">
+    <li><input class="input-search" placeholder="Enter a Movie" aria-label="Search" [(ngModel)]="searchText"
+        name="searchText">
+    </li>
+    <li>
+      <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
+        <button class="search-bnt" type="submit" (click)="ngOnInit()">Search</button>
+      </a>
+    </li>
+  </ul>
+</header>

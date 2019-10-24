@@ -14,7 +14,9 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
     //get url paramter value
     this.route.paramMap.subscribe(params => {
+      //store in variable
       this.searchValue = params.get('searchValue');
+      //inject url parameter in Service method.
       this.Service.searchMovies(this.searchValue).subscribe(res => {
       this.Movies = res.results;
       })

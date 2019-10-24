@@ -1,25 +1,5 @@
 <section>
-<header>
-  <div class="logo">
-  </div>
-  <div class="link-box">
-    <ul class="route-links">
-      <li class="route"><a href="#" routerLink="/">Home</a></li>
-      <li class="route"><a href="#" routerLink="/Movies">Movies</a></li>
-      <li class="route"><a href="#" routerLink="/TV">TV Series</a></li>
-    </ul>
-  </div>
-  <ul class = "route-links">
-    <li><input class="input-search" placeholder="Enter a Movie" aria-label="Search" [(ngModel)]="searchText"
-        name="searchText">
-      </li>
-    <li>
-      <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
-      <button class="search-bnt" type="submit" (click)="ngOnInit()">Search</button>
-      </a>
-      </li>
-  </ul>
-</header>
+<app-search-navbar></app-search-navbar>
   <main>
   <div class = "container">
     <h5 class = "results-txt">Showing results for "{{ searchValue }}"</h5>
