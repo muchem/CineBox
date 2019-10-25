@@ -10,6 +10,7 @@ export class MovieDetailsComponent implements OnInit {
   Id;
   Movie;
   Cast;
+  showActor:boolean = true;
   constructor(private Service: MoviesService, private route: ActivatedRoute) { }
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -17,11 +18,14 @@ export class MovieDetailsComponent implements OnInit {
       parseInt(this.Id);
       this.Service.getMovieDetails(this.Id).subscribe(movie =>{
        this.Movie = movie;
+      })
       this.Service.getCast(this.Id).subscribe(cast =>{
           this.Cast = cast.cast;
           console.log(this.Cast);
-        })
       })
+      if (this.Cast.profile_path === null){
+        this.showActor = false; 
+      }
     });
   }
 

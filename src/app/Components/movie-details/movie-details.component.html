@@ -26,10 +26,16 @@
     </div>
        <h1>Cast</h1>
     <div class = "row">
-        <div class="col-lg-3 col-md-4 col-sm-6"*ngFor = "let
+        <div class="col-lg-2 col-md-3 col-sm-6"*ngFor = "let
         cast of Cast">
-            <img src="https://image.tmdb.org/t/p/w200{{cast.profile_path}}">
-            {{cast|json}}
+        <div class = "cast-img">
+            <img src="https://image.tmdb.org/t/p/w200{{cast.profile_path}}"alt="
+            image-profile not avaliable">
+        </div>
+            <div class = 'cast-txt'>
+                  <h6>{{cast.name}}</h6>
+                  <p><small>as {{cast.character}}</small></p>
+            </div>
         </div>
     </div>
         <pre>

@@ -39,12 +39,30 @@ h5{
     padding:3px;
     margin:0px;
 }
-#star-img{
-    width:12px;
+.cast-img{
+    width:80%;
+    height:75%;
+    margin:auto;
+    text-align:center;
+}
+.cast-img img{
+    width:100%;
+     height:100%;
+      border: solid 1px rgba(0, 0, 0, 0.212);
+      border-radius: 15px;
+}
+.cast-txt{
+     text-align:center;
+}
+.cast-txt h6{
+    margin-bottom:0;
 }
 
 @media screen and (max-width:576px){
     .poster-box img {
       width: 60%;
+    }
+    .cast-img {
+      width: 50%;
     }
 }
