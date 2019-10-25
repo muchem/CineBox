@@ -8,7 +8,7 @@ import { Response } from '../Models/response';
   providedIn: 'root'
 })
 export class MoviesService {
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
   apiKey: string = environment.API_Key;
   searchString;
   selectedId;
@@ -26,11 +26,15 @@ export class MoviesService {
     this.searchString = { params: search };
     return this.http.get<Response[]>(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.searchString.params.updates[0].value}`);
   }
+
   getMovieDetails(Id): Observable<any[]>{
-    //set parameter
-    let MovieIdPara = new HttpParams().set('movie_id',Id);
-    //store parameter in variable(object)
+    let MovieIdPara = new HttpParams().set('movie_id', Id);
     this.selectedId = { params: MovieIdPara };
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}?api_key=${this.apiKey}&language=en-US`);
+  }
+  getCast(Id): Observable<any[]>{
+    let MovieIdPara = new HttpParams().set('movie_id', Id);
+    this.selectedId = { params: MovieIdPara };
+    return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/credits?api_key=${this.apiKey}`)
   }
 }

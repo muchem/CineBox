@@ -24,8 +24,13 @@
                  <p>{{Movie.overview}}</p>
             </div>
     </div>
+       <h1>Cast</h1>
     <div class = "row">
-        <h1>Cast</h1>
+        <div class="col-lg-3 col-md-4 col-sm-6"*ngFor = "let
+        cast of Cast">
+            <img src="https://image.tmdb.org/t/p/w200{{cast.profile_path}}">
+            {{cast|json}}
+        </div>
     </div>
         <pre>
         {{Movie | json}}

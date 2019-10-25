@@ -9,14 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 export class MovieDetailsComponent implements OnInit {
   Id;
   Movie;
+  Cast;
   constructor(private Service: MoviesService, private route: ActivatedRoute) { }
-
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.Id = params.get('movieId');
       parseInt(this.Id);
       this.Service.getMovieDetails(this.Id).subscribe(movie =>{
        this.Movie = movie;
+      this.Service.getCast(this.Id).subscribe(cast =>{
+          this.Cast = cast.cast;
+          console.log(this.Cast);
+        })
       })
     });
   }
