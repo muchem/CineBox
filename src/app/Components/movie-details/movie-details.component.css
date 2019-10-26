@@ -36,12 +36,11 @@ h1{
     margin:0;
 }
 h5{
-    padding:3px;
+    padding:4px;
     margin:0px;
 }
 .cast-img{
-    width:80%;
-    height:65%;
+    width:100%;
     margin:auto;
     text-align:center;
 }
@@ -58,7 +57,7 @@ h5{
     margin-bottom:0;
 }
 .cast-row{
-    height:480px;
+    height:295px;
     overflow: scroll;
     margin:10px;
 }
@@ -100,14 +99,11 @@ h5{
     .poster-box img {
       width: 70%;
     }
-    .cast-img{
-        height:75%;
-    }
     .cast-img img{
-        width:90%;
+        width:50%;
     }
     .cast-row{
-        height:360px;
+        height:350px;
     }
     ::-webkit-scrollbar {
       width: 20px;

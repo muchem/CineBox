@@ -13,6 +13,8 @@ export class MovieDetailsComponent implements OnInit {
   movie;
   Cast;
   Similar:Response[];
+  show:boolean = false;
+  showCast:boolean = false;
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.Id = params.get('movieId');
@@ -23,11 +25,22 @@ export class MovieDetailsComponent implements OnInit {
 
       this.Service.getCast(this.Id).subscribe(members => {
         this.Cast = members.cast;
+        console.log(members.cast)
+        for ( let i = 0; i<= this.Cast.length; i++ ){
+            if(this.Cast[i].profile_path == null){
+                this.Cast.splice(i, 1);
+            }
+        }
+      this.Cast = this.Cast;
       })
 
       this.Service.getSimilarMovies(this.Id).subscribe(alike => {
         this.Similar = alike.results;
+        if (this.Similar.length === 0){
+          this.show = true;
+        }
       })
+
     });
   }
 
