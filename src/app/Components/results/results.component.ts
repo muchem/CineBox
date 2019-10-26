@@ -10,6 +10,7 @@ import { Response } from '../../Models/response';
 export class ResultsComponent implements OnInit {
   searchValue:string;
   Movies:Response[];
+  showCard:boolean = true;
   constructor(private route: ActivatedRoute, private Service: MoviesService) { }
   ngOnInit() {
     //get url paramter value

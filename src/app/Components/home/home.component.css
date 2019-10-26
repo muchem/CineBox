@@ -58,6 +58,9 @@ form{
     }
 }
 @media screen and (max-width:576px){
+        .jumbotron {
+          height: 90vh;
+        }
     .input-search{
         width: 60%;
         padding:5px;
