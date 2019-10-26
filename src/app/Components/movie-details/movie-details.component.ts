@@ -20,6 +20,8 @@ export class MovieDetailsComponent implements OnInit {
   url: SafeResourceUrl;
   url2: SafeResourceUrl;
   Similar:Response[];
+  videoMessage:boolean = false;
+  hide:boolean = true;
   show:boolean = false;
   showCast:boolean = false;
   ngOnInit() {
@@ -42,7 +44,16 @@ export class MovieDetailsComponent implements OnInit {
       })
       this.Service.getVideos(this.Id).subscribe(video =>{
         this.Videos = video.results;
-          this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[0].key}`);
+          if(this.Videos.length == 1){
+            this.hide = false;
+          }
+          if(this.Videos.length > 1){
+            this.hide = true;
+          }
+          if(this.Videos.length === 0){
+            this.videoMessage = true;
+          }
+        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[0].key}`);
         this.url2 = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[1].key}`);
       })
     });
