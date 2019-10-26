@@ -4,33 +4,33 @@
     <div class = "container detail-section">
         <div class = "row">
             <div class = 'col-sm-4'>
-                <div class = "poster-box">
-                    <img src="https://image.tmdb.org/t/p/w200{{Movie.poster_path}}"alt="Poster Not Avaliable">
+                <div class="poster-box">
+                    <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="Poster Not Avaliable">
                 </div>
             </div>
     <div class="col-sm-8">
         <ul style = "display:flex; align-items: center;">
             <li>
-              <h1>{{Movie.title}}</h1>
+              <h1>{{movie.title}}</h1>
             </li>
             <li>
               <div class="rate-box">
-                <h5>{{Movie.vote_average}}</h5>
+                <h5>{{movie.vote_average}}</h5>
               </div>
             </li>
         </ul>
-        <p>{{Movie.tagline}}</p>
+        <p>{{movie.tagline}}</p>
                  <h4>Plot Overview</h4>
-                 <p>{{Movie.overview}}</p>
+                 <p>{{movie.overview}}</p>
             </div>
     </div>
-       <h1>Cast</h1>
-    <div class = "row">
+       <h1 class = "detail-header">Cast</h1>
+    <div class = "row cast-row">
         <div class="col-lg-2 col-md-3 col-sm-6"*ngFor = "let
         cast of Cast">
         <div class = "cast-img">
             <img src="https://image.tmdb.org/t/p/w200{{cast.profile_path}}"alt="
-            image-profile not avaliable">
+            profile picture not avaliable">
         </div>
             <div class = 'cast-txt'>
                   <h6>{{cast.name}}</h6>
@@ -38,9 +38,22 @@
             </div>
         </div>
     </div>
-        <pre>
-        {{Movie | json}}
-        </pre>
+    <h1 class="detail-header">Similar Movies</h1>
+        <div class = "row">
+        <div class="col-lg-3 col-md-4 col-sm-6"
+        *ngFor="let similar of Similar">
+        <a href="#" routerLink='/movieDetails/{{ similar.id }}'>
+        <div class = "similar-poster-box">
+            <img src="https://image.tmdb.org/t/p/w200{{similar.poster_path}}">
+        </div>
+                </a>
+            <div class = "similar-movie-txt">
+            <h6 class="tl-txt"><b>{{ similar.title }}</b></h6>
+            <p class="data-txt"><small>{{ similar.release_date }}</small></p>
+            </div>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
 </main>
+

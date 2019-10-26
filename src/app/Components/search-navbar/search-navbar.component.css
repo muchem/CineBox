@@ -50,3 +50,8 @@ li {
 #ticket-icon{
     width:35px;
 }
+@media screen and (max-width:576px){
+    .input-search{display:none}
+    .logo{display:none}
+    .search-bnt{display:none}
+}

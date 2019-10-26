@@ -12,8 +12,8 @@ export class MoviesService {
   apiKey: string = environment.API_Key;
   searchString;
   selectedId;
-  getUpcomingMovies(): Observable<any[]>{
-    return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`);
+  getUpcomingMovies(): Observable<Response[]>{
+    return this.http.get<Response[]>(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`);
   }
   getPopularMovies():Observable<any[]>{
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}&language=en-US&page=1`);
@@ -27,14 +27,19 @@ export class MoviesService {
     return this.http.get<Response[]>(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.searchString.params.updates[0].value}`);
   }
 
-  getMovieDetails(Id): Observable<any[]>{
+  getMovieDetails(Id): Observable<Response[]>{
     let MovieIdPara = new HttpParams().set('movie_id', Id);
     this.selectedId = { params: MovieIdPara };
-    return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}?api_key=${this.apiKey}&language=en-US`);
+    return this.http.get<Response[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}?api_key=${this.apiKey}&language=en-US`);
   }
   getCast(Id): Observable<any[]>{
     let MovieIdPara = new HttpParams().set('movie_id', Id);
     this.selectedId = { params: MovieIdPara };
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/credits?api_key=${this.apiKey}`)
+  }
+  getSimilarMovies(Id):Observable<any[]>{
+    let MovieIdPara = new HttpParams().set('movie_id', Id);
+    this.selectedId = { params: MovieIdPara };
+    return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/similar?api_key=${this.apiKey}&language=en-US&page=1`)
   }
 }
