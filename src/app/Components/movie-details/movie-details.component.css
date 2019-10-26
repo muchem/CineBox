@@ -61,6 +61,11 @@ h5{
     overflow: scroll;
     margin:10px;
 }
+.video-box {
+    text-align:center;
+    margin:auto;
+    width:98%;
+}
 .detail-header{
     margin: 15px 30px;
     letter-spacing:3px;

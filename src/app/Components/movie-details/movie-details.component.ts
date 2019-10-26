@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../Services/movies.service';
 import { ActivatedRoute } from '@angular/router';
+import { SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Response } from '../../Models/response';
 @Component({
   selector: 'app-movie-details',
@@ -8,10 +10,15 @@ import { Response } from '../../Models/response';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
-  constructor(private Service: MoviesService, private route: ActivatedRoute) { }
+  constructor(private Service: MoviesService, 
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer) { }
   Id;
   movie;
   Cast;
+  Videos;
+  url: SafeResourceUrl;
+  url2: SafeResourceUrl;
   Similar:Response[];
   show:boolean = false;
   showCast:boolean = false;
@@ -24,23 +31,20 @@ export class MovieDetailsComponent implements OnInit {
       })
 
       this.Service.getCast(this.Id).subscribe(members => {
-        this.Cast = members.cast;
-        console.log(members.cast)
-        for ( let i = 0; i<= this.Cast.length; i++ ){
-            if(this.Cast[i].profile_path == null){
-                this.Cast.splice(i, 1);
-            }
-        }
-      this.Cast = this.Cast;
+        this.Cast = members.cast.splice(0,18);
       })
 
       this.Service.getSimilarMovies(this.Id).subscribe(alike => {
-        this.Similar = alike.results;
+        this.Similar = alike.results.splice(0, 12);
         if (this.Similar.length === 0){
           this.show = true;
         }
       })
-
+      this.Service.getVideos(this.Id).subscribe(video =>{
+        this.Videos = video.results;
+          this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[0].key}`);
+        this.url2 = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[1].key}`);
+      })
     });
   }
 

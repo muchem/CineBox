@@ -42,4 +42,9 @@ export class MoviesService {
     this.selectedId = { params: MovieIdPara };
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/similar?api_key=${this.apiKey}&language=en-US&page=1`)
   }
+  getVideos(Id):Observable<any[]>{
+    let MovieIdPara = new HttpParams().set('movie_id', Id);
+    this.selectedId = { params: MovieIdPara };
+    return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/videos?api_key=${this.apiKey}&language=en-US`)
+  }
 }
