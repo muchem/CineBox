@@ -34,6 +34,9 @@ export class MovieDetailsComponent implements OnInit {
 
       this.Service.getCast(this.Id).subscribe(members => {
         this.Cast = members.cast.splice(0,18);
+        if(this.Cast.length === 0){
+          this.showCast = true;
+        }
       })
 
       this.Service.getSimilarMovies(this.Id).subscribe(alike => {
