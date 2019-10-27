@@ -76,7 +76,7 @@ h5{
     overflow: scroll;
 }
 .review-box p{
-    margin-bottom:3px;
+    margin-bottom:0px;
     line-height: 30px;
 }
 ::-webkit-scrollbar {
