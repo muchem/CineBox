@@ -17,6 +17,7 @@ export class MovieDetailsComponent implements OnInit {
   movie;
   Cast;
   Videos;
+  Reveiws;
   url: SafeResourceUrl;
   url2: SafeResourceUrl;
   Similar:Response[];
@@ -58,6 +59,10 @@ export class MovieDetailsComponent implements OnInit {
           }
         this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[0].key}`);
         this.url2 = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[1].key}`);
+      })
+      this.Service.getReviews(this.Id).subscribe(review =>{
+          this.Reveiws = review.results.splice(0,4);
+          console.log(this.Reveiws);
       })
     });
   }

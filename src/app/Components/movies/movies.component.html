@@ -1,7 +1,88 @@
 <app-navbar></app-navbar>
+<div>
+  <!--
 <div class = "jumbotron text-center">
     <h4>“Your life experience is a moving picture,<br>
     of which you are writer, director, performer, producer and critic.”
     </h4> 
     <h5>― T.F. Hodge</h5>
+</div>
+-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <img src="https://image.tmdb.org/t/p/w700{{Upcoming[6].backdrop_path}}"  height="100vh">
+     
+    </div>
+    <div class="carousel-item">
+        <img src="https://image.tmdb.org/t/p/w700{{Upcoming[4].backdrop_path}}"  height="100vh">
+    </div>
+    <div class="carousel-item">
+  <img src="https://image.tmdb.org/t/p/w700{{Upcoming[2].backdrop_path}}" height="100vh">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+    <main>
+        <div class = 'container'>
+            <h2 class="detail-header">Upcoming Movies</h2>
+      <div class="row">
+        <div class='col-lg-3 col-md-4 col-sm-6' *ngFor="let upcoming of Upcoming">
+            <a href = "#" routerLink = "/movieDetails/{{upcoming.id}}">
+          <div class="poster-box">
+            <img src="https://image.tmdb.org/t/p/w300{{upcoming.poster_path}}">
+          </div>
+          </a>
+          <div class="poster-txt">
+            <h6 class="tl-txt"><b>{{ upcoming.title }}</b></h6>
+            <p class="data-txt"><small>{{ upcoming.release_date }}</small></p>
+          </div>
+        </div>
+      </div>
+       <h2 class="detail-header">Top Rated</h2>
+      <div class = "row">
+            <div class='col-lg-3 col-md-4 col-sm-6'*ngFor = "let top of TopRated">
+                 <a href="#" routerLink="/movieDetails/{{top.id}}">
+                   <div class="poster-box">
+                     <img src="https://image.tmdb.org/t/p/w300{{top.poster_path}}">
+                   </div>
+                 </a>
+                 <div class="poster-txt">
+                   <h6 class="tl-txt"><b>{{ top.title }}</b></h6>
+                   <p class="data-txt"><small>{{ top.release_date }}</small></p>
+                 </div>
+            </div>
+        </div>
+          <h2 class="detail-header">Popular Movies</h2>
+           <div class="row">
+             <div class='col-lg-3 col-md-4 col-sm-6' *ngFor="let pop of Popular">
+               <a href="#" routerLink="/movieDetails/{{pop.id}}">
+                 <div class="poster-box">
+                   <img src="https://image.tmdb.org/t/p/w300{{pop.poster_path}}">
+                 </div>
+               </a>
+               <div class="poster-txt">
+                 <h6 class="tl-txt"><b>{{ pop.title }}</b></h6>
+                 <p class="data-txt"><small>{{ pop.release_date }}</small></p>
+               </div>
+             </div>
+           </div>
+      </div>
+    </main>
 </div>

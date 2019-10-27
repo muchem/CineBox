@@ -1,4 +1,4 @@
-<app-search-navbar></app-search-navbar>
+<app-search-navbar id ="top"></app-search-navbar>
 <main>
 <div class = "container-fluid">
     <div class = "container detail-section">
@@ -58,6 +58,14 @@
                 </div>
               </div>
     </div>
+     <h2 class="detail-header">Audience Reviews</h2>
+     <div class = "row">
+         <div class = "col-md-6 review-box"*ngFor = "let review of Reveiws">
+            <p>{{review.content}}</p>
+            <h6><b>-{{review.author}}</b></h6>
+         </div>
+     </div>
+
     <h2 class="detail-header">Similar Movies</h2>
     <h5 class="detail-header" *ngIf="show">no results found</h5>
         <div class = "row">

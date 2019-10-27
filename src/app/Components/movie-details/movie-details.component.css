@@ -70,6 +70,15 @@ h5{
     margin: 15px 30px;
     letter-spacing:3px;
 }
+.review-box{
+    padding:10px 20px;
+    height:450px;
+    overflow: scroll;
+}
+.review-box p{
+    margin-bottom:3px;
+    line-height: 30px;
+}
 ::-webkit-scrollbar {
   width: 20px;
 }

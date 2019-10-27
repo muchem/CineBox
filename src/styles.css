@@ -2,3 +2,13 @@
     margin:0px;
     padding:0px;
 }
+.detail-header {
+  margin: 15px 30px;
+  letter-spacing: 3px;
+}
+@media screen and (max-width:576px){
+        .detail-header {
+          margin: 20px 5px;
+          text-align: center;
+        }
+}

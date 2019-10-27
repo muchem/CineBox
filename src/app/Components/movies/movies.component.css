@@ -1,0 +1,39 @@
+.jumbotron{
+    margin:0;
+    height:60vh;
+      background-image: url('https://i.pinimg.com/originals/37/ef/99/37ef99c0e26afcf9d1812bec052f3256.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color:#dfdfdf;
+}
+main{
+   background-color:#070707;
+} h2{
+       color:rgb(236, 236, 236);
+}
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+.poster-box{
+    width:80%;
+    text-align:center;
+    margin:auto;
+}
+.poster-box img{
+    width:100%;
+    border: solid 1px rgba(0, 0, 0, 0.212);
+    border-radius: 15px;
+}
+.poster-txt{
+    text-align:center;
+}
+.tl-txt{
+      margin-bottom: 0;
+      color:#f2f2f2;
+
+}
+.data-txt{
+      color:#f1f1f1d2;
+}
