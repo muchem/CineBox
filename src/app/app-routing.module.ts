@@ -5,13 +5,15 @@ import { MoviesComponent } from './Components/movies/movies.component';
 import { TVSeriesComponent } from './Components/tv-series/tv-series.component';
 import { ResultsComponent } from './Components/results/results.component';
 import { MovieDetailsComponent } from './Components/movie-details/movie-details.component';
+import { ActorDetailsComponent } from './Components/actor-details/actor-details.component';
 const routes: Routes = [
   { path:'',component:HomeComponent },
   { path:'searchResults',component:ResultsComponent },
   { path:'Movies',component:MoviesComponent },
   { path:'TV',component:TVSeriesComponent },
   { path:'searchResults/:searchValue',component:ResultsComponent },
-  { path:'movieDetails/:movieId', component: MovieDetailsComponent }
+  { path:'movieDetails/:movieId', component: MovieDetailsComponent },
+  {path:'actorDetails/:actorId',component:ActorDetailsComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

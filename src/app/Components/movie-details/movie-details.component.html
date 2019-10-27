@@ -31,10 +31,12 @@
     <div class = "row cast-row">
         <div class="col-lg-2 col-md-3 col-sm-6"*ngFor = "let
         cast of Cast">
+        <a href = "#" routerLink = "/actorDetails/{{cast.id}}">
         <div class="cast-img">
             <img src="https://image.tmdb.org/t/p/w200{{cast.profile_path}}"alt="
             profile picture not avaliable">
         </div>
+        </a>
             <div class='cast-txt'>
                   <h6>{{cast.name}}</h6>
                   <p><small>as {{cast.character}}</small></p>
