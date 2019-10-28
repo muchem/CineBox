@@ -35,6 +35,7 @@ export class MovieDetailsComponent implements OnInit {
 
       this.Service.getCast(this.Id).subscribe(members => {
         this.Cast = members.cast.splice(0,18);
+        console.log(this.Cast);
         if(this.Cast.length === 0){
           this.showCast = true;
         }
@@ -61,8 +62,7 @@ export class MovieDetailsComponent implements OnInit {
         this.url2 = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[1].key}`);
       })
       this.Service.getReviews(this.Id).subscribe(review =>{
-          this.Reveiws = review.results.splice(0,4);
-          console.log(this.Reveiws);
+          this.Reveiws = review.results.splice(0,4)
       })
     });
   }

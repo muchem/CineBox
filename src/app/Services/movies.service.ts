@@ -12,6 +12,7 @@ export class MoviesService {
   apiKey: string = environment.API_Key;
   searchString;
   selectedId;
+  selectedCreditId;
   getUpcomingMovies(): Observable<Response[]>{
     return this.http.get<Response[]>(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`);
   }
@@ -47,9 +48,14 @@ export class MoviesService {
     this.selectedId = { params: MovieIdPara };
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/videos?api_key=${this.apiKey}&language=en-US`)
   }
+  getActorDetails(creditValue):Observable<any[]>{
+    let Credits = new HttpParams().set('credit_id', creditValue);
+    this.selectedCreditId = { params: Credits };
+    return this.http.get<any[]>(`https://api.themoviedb.org/3/credit/${this.selectedCreditId.params.updates[0].value}?api_key=${this.apiKey}`);
+  }
   getReviews(Id):Observable<any[]>{
     let MovieIdPara = new HttpParams().set('movie_id', Id);
-    this.selectedId = { params: MovieIdPara };
+    this.selectedId = { params: MovieIdPara };;
     return this.http.get<any[]>(`https://api.themoviedb.org/3/movie/${this.selectedId.params.updates[0].value}/reviews?api_key=${this.apiKey}&language=en-US&page=1`)
   }
 }
