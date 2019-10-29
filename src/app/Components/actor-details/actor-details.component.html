@@ -2,27 +2,27 @@
 <div class = "container-fluid">
     <main>
         <div class = "container">
-        <div class = "row">
-            <div class = "col-md-4">
+        <div class = "row text-center">
+            <div class = "col-md-4 left-col">
                 <div class = "profile-box">
                     <img src="https://image.tmdb.org/t/p/w300{{actorDetails.person.profile_path}}">
                 </div>
-                Name:{{actorDetails.person.name}}
-                Department:
-                Popularity:
+                <h5><b>{{actorDetails.person.name}}</b></h5>
+                <h5><b>Department: </b>{{actorDetails.person.known_for_department}}</h5>
+                <h5><b>Popularity: </b>{{actorDetails.person.popularity}}</h5>
             </div>
              <div class="col-md-8">
-                 <h2>Featured Films</h2>
+                 <h2 class="detail-header">Well Known For</h2>
                  <div class = "row">
-                     <div class="col-md-4" *ngFor="let Featured of Movies">
+                     <div class="col-sm-4" *ngFor="let Featured of Movies">
                          <a href="#" routerLink="/movieDetails/{{Featured.id}}">
                          <div class = "poster-box">
                              <img src="https://image.tmdb.org/t/p/w300{{Featured.poster_path}}">
                          </div>
                          </a>
                          <div class = "text-box">
-                              <h3>{{Featured.title}}</h3>
-
+                              <h6><b>{{Featured.title}}</b></h6>
+                              <p><small>{{Featured.release_date}}</small></p>
                          </div>
                      </div>
                  </div>
