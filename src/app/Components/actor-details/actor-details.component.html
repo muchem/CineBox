@@ -14,10 +14,12 @@
              <div class="col-md-8">
                  <h2>Featured Films</h2>
                  <div class = "row">
-                     <div class="col-md-6" *ngFor="let Featured of Movies">
+                     <div class="col-md-4" *ngFor="let Featured of Movies">
+                         <a href="#" routerLink="/movieDetails/{{Featured.id}}">
                          <div class = "poster-box">
                              <img src="https://image.tmdb.org/t/p/w300{{Featured.poster_path}}">
                          </div>
+                         </a>
                          <div class = "text-box">
                               <h3>{{Featured.title}}</h3>
 
