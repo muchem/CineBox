@@ -15,12 +15,17 @@
                  <h2>Featured Films</h2>
                  <div class = "row">
                      <div class="col-md-6" *ngFor="let Featured of Movies">
-                        <h1>{{Movies.name}}</h1>
+                         <div class = "poster-box">
+                             <img src="https://image.tmdb.org/t/p/w300{{Featured.poster_path}}">
+                         </div>
+                         <div class = "text-box">
+                              <h3>{{Featured.title}}</h3>
+
+                         </div>
                      </div>
                  </div>
-
              </div>
         </div>
-        </div>
+    </div>
     </main>
 </div>
