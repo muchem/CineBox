@@ -37,6 +37,12 @@
 .text-box{
     text-align:center;
 }
+.pop-box{
+    width:30px;
+    margin:auto;
+    text-align:center;
+    background-color:#db4949;
+}
 @media screen and (max-width:768px){
    
 }
