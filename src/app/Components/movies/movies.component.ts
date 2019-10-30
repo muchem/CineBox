@@ -17,10 +17,10 @@ export class MoviesComponent implements OnInit {
      
     })
     this.Serivice.getTopRated().subscribe(top =>{
-      this.TopRated = top.results.splice(0,12);
+      this.TopRated = top.results;
     })
     this.Serivice.getPopularMovies().subscribe(popular =>{
-      this.Popular = popular.results.splice(0,8);
+      this.Popular = popular.results;
     })
     }
 }

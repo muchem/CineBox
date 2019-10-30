@@ -2,14 +2,16 @@
 <div class="container-fluid">
   <main>
     <div class="container">
-      <div class="row text-center">
+      <div class="row">
         <div class="col-md-4 left-col">
           <div class="profile-box">
             <img src="https://image.tmdb.org/t/p/w300{{actorDetails.person.profile_path}}">
           </div>
+          <section class = "actor-txt">
           <h5><b>{{actorDetails.person.name}}</b></h5>
           <h5><b>Department: </b>{{actorDetails.person.known_for_department}}</h5>
           <h5><b>Popularity: </b>{{actorDetails.person.popularity}}</h5>
+          </section>
         </div>
         <div class="col-md-8">
           <h2 class="detail-header">Well Known For</h2>
@@ -31,3 +33,4 @@
     </div>
   </main>
 </div>
+<app-footer></app-footer>

@@ -7,21 +7,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeComponent } from './Components/home/home.component';
 import { MoviesComponent } from './Components/movies/movies.component';
-import { TVSeriesComponent } from './Components/tv-series/tv-series.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ResultsComponent } from './Components/results/results.component';
 import { MovieCardComponent } from './Components/movie-card/movie-card.component';
 import { MovieDetailsComponent } from './Components/movie-details/movie-details.component';
 import { SearchNavbarComponent } from './Components/search-navbar/search-navbar.component';
 import { ActorDetailsComponent } from './Components/actor-details/actor-details.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     MoviesComponent,
-    TVSeriesComponent,
     FooterComponent,
     ResultsComponent,
     MovieCardComponent,

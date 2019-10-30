@@ -35,7 +35,6 @@ export class MovieDetailsComponent implements OnInit {
 
       this.Service.getCast(this.Id).subscribe(members => {
         this.Cast = members.cast.splice(0,18);
-        console.log(this.Cast);
         if(this.Cast.length === 0){
           this.showCast = true;
         }
