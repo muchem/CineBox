@@ -109,6 +109,9 @@ h5{
 .tl-txt{
     margin-bottom:0;
 }
+.search{
+    visibility:hidden;
+}
 @media screen and (max-width:576px){
     .poster-box img {
       width: 70%;
@@ -132,5 +135,15 @@ h5{
     }
     .similar-poster-box{
         width:70%;
+    }
+    .search{
+        visibility: visible;
+        padding:5px;
+
+    }
+    .search input{
+            border: solid 1px rgb(235, 235, 235);
+            border-radius: 5px;
+            width:60vw;
     }
 }

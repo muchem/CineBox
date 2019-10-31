@@ -1,6 +1,16 @@
 <app-search-navbar></app-search-navbar>
 <main>
 <div class = "container-fluid">
+    <ul style = "display:flex;"class = "search">
+        <li>
+            <input placeholder="Enter a movie" [(ngModel)]="searchText" name="searchText">
+        </li>
+    <li>
+        <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
+        <button class="search-bnt" type="submit" (click)="ngOnInit()">Search</button>
+        </a>
+    </li>
+    </ul>
     <div class = "container detail-section">
         <div class = "row">
             <div class = 'col-sm-4'>
