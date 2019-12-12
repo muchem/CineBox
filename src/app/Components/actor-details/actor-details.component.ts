@@ -23,8 +23,6 @@ export class ActorDetailsComponent implements OnInit {
       this.Service.getActorDetails(this.CreditId).subscribe(details => {
         this.actorDetails = details;
         this.Movies = details.person.known_for;
-        console.log(this.Movies);
-        console.log(this.actorDetails);
       })
     });
   }
