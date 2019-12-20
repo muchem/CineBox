@@ -20,7 +20,7 @@ export class MovieDetailsComponent implements OnInit {
   Reveiws;
   url: SafeResourceUrl;
   url2: SafeResourceUrl;
-  Similar:Response[];
+  Similar//:Response[];
   videoMessage:boolean = false;
   hide:boolean = true;
   show:boolean = false;
