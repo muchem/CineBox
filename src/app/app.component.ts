@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CineBox';
+  onActivate(event) {
+    document.querySelector('body').scrollTo(0,0)
+}
 }
