@@ -1,5 +1,6 @@
-  # Vugo Real Estate Company
+  # CineBox
 
+  CineBox is a informative film platform,browse and search through thousands of films, receive plot summaries, film cast, critic reveiews and much more through the Movie Database Api.CineBox is produced entirely on the Angular framework using several of its notable features. Such as compomnents,routing,Rxjs library,Typescript and the HttpClientModule
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -15,7 +16,7 @@ https://git-scm.com/downloads
  
   git clone  https://github.com/muchem/Real-estate-concept.git
   
-![Alt text](app\images\App-images\movie-search-sample.png)
+![Alt text](app/images/App-images/movie-search-sample.png)
 
  
  2.Open Repo Folder in a Text Editor or Ide.
