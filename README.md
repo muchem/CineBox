@@ -15,7 +15,7 @@ https://git-scm.com/downloads
  
   git clone  https://github.com/muchem/Real-estate-concept.git
   
-![Alt text](C:\Users\User>C:\Users\User\Desktop\CineBox\movie-search-sample.png)
+![Alt text](app\images\App-images\movie-search-sample.png)
 
  
  2.Open Repo Folder in a Text Editor or Ide.
