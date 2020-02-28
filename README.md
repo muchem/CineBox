@@ -1,7 +1,46 @@
-# CineBox
+  # Vugo Real Estate Company
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
-## Development server
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Prerequisites
+install git to enable git command in terminal.
+
+
+https://git-scm.com/downloads
+
+## Running The Application on Your Local Machine
+ 1.Clone the repo
+ 
+  git clone  https://github.com/muchem/Real-estate-concept.git
+  
+![Alt text](C:\Users\User>C:\Users\User\Desktop\CineBox\movie-search-sample.png?raw=true "Title")
+
+ 
+ 2.Open Repo Folder in a Text Editor or Ide.
+ 
+ 3.Open index.html in your favorite browser
+ 
+ 4.Explore
+
+Enjoy :)
+
+Built With
+
+
+ *Html5
+ 
+ *Css3
+ 
+ *Bootstrap-4
+ 
+ *Javascript
+ 
+ *Angular
+ 
+
+## Contributors
+ Melissa Uchem
+
+## Acknowledgments
