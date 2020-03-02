@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-navbar.component.css']
 })
 export class SearchNavbarComponent implements OnInit {
-
+  searchText;
   constructor() { }
 
   ngOnInit() {

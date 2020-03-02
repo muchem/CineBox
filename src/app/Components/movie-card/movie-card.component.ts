@@ -7,7 +7,7 @@ import { Response } from '../../Models/response';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent implements OnInit {
-  @Input()  Movies:Response[];
+  @Input()  Movies//:Response[];
   constructor() { }
 
   ngOnInit() {

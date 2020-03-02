@@ -18,6 +18,7 @@ export class MovieDetailsComponent implements OnInit {
   Cast;
   Videos;
   Reveiws;
+  searchText;
   url: SafeResourceUrl;
   url2: SafeResourceUrl;
   Similar//:Response[];
