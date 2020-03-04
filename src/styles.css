@@ -9,6 +9,16 @@ body{
   margin: 15px 30px;
   letter-spacing: 3px;
 }
+.input-search {
+  margin: auto;
+  padding: 2px
+}
+.search-bnt {
+  padding: 5px;
+  background-color: #d32727;
+  color: #f2f2f2;
+  border-color: #d32727;
+}
 @media screen and (max-width:576px){
         .detail-header {
           margin: 20px 5px;

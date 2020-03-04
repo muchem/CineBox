@@ -144,7 +144,8 @@ h5{
     }
     .search input{
             border: solid 1px rgb(235, 235, 235);
-            border-radius: 5px;
-            width:60vw;
+            padding:3px;
+           
+            width:76vw;
     }
 }

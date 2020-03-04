@@ -3,11 +3,11 @@
 <div class = "container-fluid">
     <ul style = "display:flex;"class = "search">
         <li>
-            <input placeholder="Enter a movie" [(ngModel)]="searchText" name="searchText">
+            <input placeholder="Enter a movie" [(ngModel)]="searchText" name="searchText"  class="input-search" >
         </li>
     <li>
         <a href="#" routerLink="/searchResults/{{ searchText }}" class="btn-search" role="button">
-        <button class="search-bnt" type="submit" (click)="ngOnInit()">Search</button>
+        <button class="search-bnt" type="submit" (click)="ngOnInit()" class="search-bnt">Search</button>
         </a>
     </li>
     </ul>

@@ -13,6 +13,9 @@ export class ResultsComponent implements OnInit {
   showCard:boolean = true;
   constructor(private route: ActivatedRoute, private Service: MoviesService) { }
   ngOnInit() {
+    if(this.searchValue == "" || this.searchValue == null){
+      this.searchValue = "Superman";
+    }
     //get url paramter value
     this.route.paramMap.subscribe(params => {
       //store in variable
