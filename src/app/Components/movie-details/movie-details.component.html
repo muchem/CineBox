@@ -15,25 +15,25 @@
         <div class = "row">
             <div class = 'col-sm-4'>
                 <div class="poster-box">
-                    <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="Poster Not Avaliable">
+                    <img src="https://image.tmdb.org/t/p/w300{{poster}}" alt="Poster Not Avaliable">
                 </div>
             </div>
     <div class="col-sm-8">
         <ul style = "display:flex; align-items: center;">
             <li>
-              <h1>{{movie.title}}</h1>
-              <p style = 'margin:0'>{{movie.release_date}}</p>
+              <h1>{{MovieTitle}}</h1>
+              <p style = 'margin:0'>{{releaseDate}}</p>
             </li>
             <li>
               <div class="rate-box">
-                <h5>{{movie.vote_average}}</h5>
+                <h5>{{voteAverage}}</h5>
               </div>
-                  <p style="margin:0;color:#a7a7a7"><small>based on {{movie.vote_count}} voters</small></p>
+                  <p style="margin:0;color:#a7a7a7"><small>based on {{voteCount}} voters</small></p>
             </li>
         </ul>
-        <p>{{movie.tagline}}</p>
+        <p>{{movieTagline}}</p>
                  <h4>Plot Overview</h4>
-                 <p>{{movie.overview}}</p>
+                 <p>{{movieOverview}}</p>
             </div>
     </div>
        <h2 class = "detail-header">Cast</h2>

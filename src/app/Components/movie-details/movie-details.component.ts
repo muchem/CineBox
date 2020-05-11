@@ -3,7 +3,6 @@ import { MoviesService } from '../../Services/movies.service';
 import { ActivatedRoute } from '@angular/router';
 import { SafeResourceUrl } from '@angular/platform-browser';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Response } from '../../Models/response';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -19,9 +18,18 @@ export class MovieDetailsComponent implements OnInit {
   Videos;
   Reveiws;
   searchText;
+  poster;
+  MovieTitle;
+  releaseDate;
+  voteAverage;
+  voteCount;
+  movieTagline;
+  movieOverview;
+  videoKey1;
+  videoKey2;
   url: SafeResourceUrl;
   url2: SafeResourceUrl;
-  Similar//:Response[];
+  Similar;
   videoMessage:boolean = false;
   hide:boolean = true;
   show:boolean = false;
@@ -32,15 +40,19 @@ export class MovieDetailsComponent implements OnInit {
       parseInt(this.Id);
       this.Service.getMovieDetails(this.Id).subscribe(detail => {
         this.movie = detail;
+        this.poster = this.movie.poster_path;
+        this.MovieTitle = this.movie.title;
+        this.releaseDate = this.movie.release_date;
+        this.voteAverage = this.movie.vote_average;
+        this.voteCount = this.movie.vote_count
+        this.movieTagline = this.movie.tagline;
+        this.movieOverview = this.movie.overview;
       })
 
       this.Service.getCast(this.Id).subscribe(members => {
         this.Cast = members.cast.splice(0,6);
         if(this.Cast.length === 0){
           this.showCast = true;
-        }
-        if(this.Cast == undefined){
-          console.log(undefined);
         }
       })
 
@@ -61,8 +73,14 @@ export class MovieDetailsComponent implements OnInit {
           if(this.Videos.length === 0){
             this.videoMessage = true;
           }
-        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[0].key}`);
-        this.url2 = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.Videos[1].key}`);
+          if(this.Videos[0] != undefined){
+            this.videoKey1 = this.Videos[0].key;
+            this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoKey1}`);
+          }
+          if(this.Videos[1] != undefined){
+            this.videoKey2 = this.Videos[1].key;
+            this.url2 = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoKey2}`);
+          }
       })
       this.Service.getReviews(this.Id).subscribe(review =>{
           this.Reveiws = review.results.splice(0,4)
